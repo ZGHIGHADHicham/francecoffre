@@ -90,6 +90,13 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* French tricolor bar */}
+      <div className="flex h-1">
+        <div className="flex-1 bg-primary" />
+        <div className="flex-1 bg-white" />
+        <div className="flex-1 bg-secondary" />
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">

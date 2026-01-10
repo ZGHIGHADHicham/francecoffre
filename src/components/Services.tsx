@@ -39,11 +39,11 @@ const Services = () => {
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1 bg-secondary/20 text-secondary-foreground rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             Nos Prestations
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Services de <span className="text-primary">coffres-forts</span>
+            Services de <span className="text-secondary">coffres-forts</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Une expertise complète pour tous vos besoins en matière de coffres-forts, 
@@ -78,7 +78,7 @@ const ServiceCard = ({
     style={{ animationDelay: `${0.1 * index}s` }}
   >
     {/* Icon */}
-    <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 text-primary group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors duration-300 mb-6">
+    <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300 mb-6">
       {icon}
     </div>
 
