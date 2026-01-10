@@ -4,99 +4,99 @@
 @tailwind components;
 @tailwind utilities;
 
-/* France Coffre - Premium Security Design System */
+/* France Coffre - Thème Drapeau Français */
 
 @layer base {
   :root {
-    /* Core colors - Deep navy and gold */
-    --background: 220 20% 97%;
-    --foreground: 220 30% 12%;
+    /* Core colors - French Flag Theme */
+    --background: 0 0% 98%;
+    --foreground: 220 70% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 12%;
+    --card-foreground: 220 70% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 12%;
+    --popover-foreground: 220 70% 15%;
 
-    /* Primary - Deep Navy Blue (trust, security) */
-    --primary: 220 60% 20%;
-    --primary-foreground: 45 50% 95%;
+    /* Primary - Bleu France (French Blue) */
+    --primary: 230 100% 30%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Warm Gold (premium, quality) */
-    --secondary: 45 80% 55%;
-    --secondary-foreground: 220 30% 12%;
+    /* Secondary - Rouge France (French Red) */
+    --secondary: 355 90% 55%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted tones */
     --muted: 220 15% 92%;
     --muted-foreground: 220 15% 45%;
 
-    /* Accent - Rich Gold */
-    --accent: 42 85% 50%;
-    --accent-foreground: 220 30% 12%;
+    /* Accent - Bleu clair */
+    --accent: 230 80% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    /* Urgent - Deep Red */
-    --destructive: 0 75% 45%;
+    /* Urgent - Rouge vif */
+    --destructive: 355 90% 50%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 20% 88%;
     --input: 220 20% 88%;
-    --ring: 45 80% 55%;
+    --ring: 230 100% 30%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(220 60% 12%) 0%, hsl(220 50% 22%) 50%, hsl(220 40% 18%) 100%);
-    --gold-gradient: linear-gradient(135deg, hsl(42 85% 50%) 0%, hsl(45 90% 60%) 50%, hsl(38 80% 45%) 100%);
-    --card-shadow: 0 4px 20px -4px hsl(220 60% 20% / 0.15);
-    --card-shadow-hover: 0 8px 30px -4px hsl(220 60% 20% / 0.25);
+    /* Custom tokens - French flag theme */
+    --hero-gradient: linear-gradient(135deg, hsl(230 100% 20%) 0%, hsl(230 80% 30%) 50%, hsl(230 70% 25%) 100%);
+    --red-gradient: linear-gradient(135deg, hsl(355 90% 50%) 0%, hsl(355 85% 60%) 50%, hsl(355 95% 45%) 100%);
+    --card-shadow: 0 4px 20px -4px hsl(230 100% 30% / 0.15);
+    --card-shadow-hover: 0 8px 30px -4px hsl(230 100% 30% / 0.25);
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-foreground: 220 70% 15%;
+    --sidebar-primary: 230 100% 30%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 80% 95%;
+    --sidebar-accent-foreground: 230 100% 30%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 230 100% 30%;
   }
 
   .dark {
-    --background: 220 30% 8%;
-    --foreground: 45 20% 95%;
+    --background: 230 30% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 220 30% 12%;
-    --card-foreground: 45 20% 95%;
+    --card: 230 30% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 30% 12%;
-    --popover-foreground: 45 20% 95%;
+    --popover: 230 30% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 45 80% 55%;
-    --primary-foreground: 220 30% 12%;
+    --primary: 230 80% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 40% 25%;
-    --secondary-foreground: 45 20% 95%;
+    --secondary: 355 80% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 25% 18%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 230 25% 18%;
+    --muted-foreground: 230 15% 65%;
 
-    --accent: 42 85% 50%;
-    --accent-foreground: 220 30% 12%;
+    --accent: 230 70% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 355 80% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 20%;
-    --ring: 45 80% 55%;
+    --border: 230 25% 20%;
+    --input: 230 25% 20%;
+    --ring: 230 80% 60%;
     
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 230 30% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 230 80% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 230 30% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 230 25% 18%;
+    --sidebar-ring: 230 80% 60%;
   }
 }
 

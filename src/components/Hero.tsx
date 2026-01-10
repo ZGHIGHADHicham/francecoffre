@@ -10,15 +10,21 @@ const Hero = () => {
         style={{ background: "var(--hero-gradient)" }}
       />
       
+      {/* French flag stripe decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-1/3 h-full bg-primary/5" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/5" />
+      </div>
+      
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
       </div>
 
       {/* Vault door silhouette */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-2/3 opacity-10">
-        <div className="w-full h-full rounded-full border-[20px] border-secondary/30" />
+        <div className="w-full h-full rounded-full border-[20px] border-white/30" />
       </div>
 
       {/* Content */}

@@ -32,8 +32,8 @@ const Header = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-secondary font-display font-bold text-xl">FC</span>
+            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center border-2 border-secondary">
+              <span className="text-primary-foreground font-display font-bold text-xl">FC</span>
             </div>
             <div className="hidden sm:block">
               <span className="font-display font-bold text-xl text-primary block leading-tight">
