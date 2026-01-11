@@ -5,7 +5,7 @@ const MentionsLegales = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-40 pb-20">
+      <main className="pt-48 pb-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="text-3xl md:text-4xl font-display font-bold text-primary mb-8">
             Mentions Légales
