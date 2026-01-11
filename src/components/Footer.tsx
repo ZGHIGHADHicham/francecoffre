@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="mb-6 bg-white rounded-lg p-3 inline-block">
               <img 
-                src="/images/france-coffre-logo.png" 
+                src="/images/france-coffre-logo.svg" 
                 alt="France Coffre - Ouverture, Réparation, Installation" 
                 className="h-16 w-auto"
               />
