@@ -9,11 +9,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="mb-6">
+            <div className="mb-6 bg-white rounded-lg p-3 inline-block">
               <img 
                 src="/images/france-coffre-logo.png" 
                 alt="France Coffre - Ouverture, Réparation, Installation" 
-                className="h-20 w-auto brightness-0 invert"
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-primary-foreground/80 max-w-md leading-relaxed mb-6">
