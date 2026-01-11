@@ -49,7 +49,7 @@ const Hero = () => {
             style={{ animationDelay: "0.5s" }}
           >
             <a href="#contact">
-              <Button variant="default" size="lg" className="text-lg px-8 py-6 shadow-gold">
+              <Button variant="default" size="lg" className="text-lg px-8 py-6">
                 Contactez-nous
               </Button>
             </a>
