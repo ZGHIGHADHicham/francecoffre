@@ -97,7 +97,7 @@ const Header = () => {
               href="#contact" 
               onClick={(e) => handleAnchorClick(e, "#contact")}
             >
-              <Button variant="default" size="lg" className="shadow-gold">
+              <Button variant="default" size="lg">
                 Contactez-nous
               </Button>
             </a>

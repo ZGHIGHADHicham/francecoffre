@@ -58,7 +58,7 @@ const Urgence = () => {
 
             <div className="space-y-4">
               <a href="tel:+33179736262" className="block">
-                <Button variant="secondary" size="lg" className="w-full text-lg py-6 shadow-gold">
+                <Button variant="secondary" size="lg" className="w-full text-lg py-6">
                   <Phone className="w-5 h-5 mr-2" />
                   Appeler maintenant
                 </Button>
