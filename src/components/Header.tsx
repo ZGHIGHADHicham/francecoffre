@@ -1,5 +1,6 @@
 import { Phone, Mail, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -31,30 +32,30 @@ const Header = () => {
       <nav className="bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src="/images/france-coffre-logo.svg" 
               alt="France Coffre - Ouverture, Réparation, Installation" 
               className="h-20 w-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#services" className="text-foreground hover:text-primary font-medium transition-colors">
+            <Link to="/#services" className="text-foreground hover:text-primary font-medium transition-colors">
               Prestations
-            </a>
-            <a href="#urgence" className="text-foreground hover:text-primary font-medium transition-colors">
+            </Link>
+            <Link to="/#urgence" className="text-foreground hover:text-primary font-medium transition-colors">
               Urgences
-            </a>
-            <a href="#about" className="text-foreground hover:text-primary font-medium transition-colors">
+            </Link>
+            <Link to="/#about" className="text-foreground hover:text-primary font-medium transition-colors">
               À propos
-            </a>
-            <a href="#contact">
+            </Link>
+            <Link to="/#contact">
               <Button variant="default" size="lg" className="shadow-gold">
                 Contactez-nous
               </Button>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -71,20 +72,20 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-card border-t border-border animate-fade-up">
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-              <a href="#services" className="text-foreground hover:text-primary font-medium py-2">
+              <Link to="/#services" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMenuOpen(false)}>
                 Prestations
-              </a>
-              <a href="#urgence" className="text-foreground hover:text-primary font-medium py-2">
+              </Link>
+              <Link to="/#urgence" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMenuOpen(false)}>
                 Urgences
-              </a>
-              <a href="#about" className="text-foreground hover:text-primary font-medium py-2">
+              </Link>
+              <Link to="/#about" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMenuOpen(false)}>
                 À propos
-              </a>
-              <a href="#contact">
+              </Link>
+              <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="default" className="w-full">
                   Contactez-nous
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         )}
