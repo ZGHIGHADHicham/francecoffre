@@ -80,7 +80,7 @@ export default {
       boxShadow: {
         card: "var(--card-shadow)",
         "card-hover": "var(--card-shadow-hover)",
-        gold: "0 4px 20px -4px hsl(45 80% 55% / 0.4)",
+        gold: "0 4px 20px -4px hsl(230 100% 30% / 0.4)",
       },
       keyframes: {
         "accordion-down": {
