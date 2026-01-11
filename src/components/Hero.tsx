@@ -36,12 +36,17 @@ const Hero = () => {
           </div>
 
           {/* Main heading */}
-          <p 
-            className="text-lg md:text-2xl lg:text-3xl text-foreground/80 font-light mb-12 opacity-0 animate-fade-up"
+          <div 
+            className="mb-12 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.3s" }}
           >
-            Spécialistes de l'ouverture de coffres-forts <span className="text-secondary font-display font-semibold">partout en France</span>
-          </p>
+            <p className="text-xl md:text-2xl lg:text-3xl text-foreground font-display">
+              Spécialistes de l'ouverture de coffres-forts
+            </p>
+            <p className="text-2xl md:text-3xl lg:text-4xl text-secondary font-display font-bold italic mt-2">
+              partout en France
+            </p>
+          </div>
 
           {/* CTA Buttons */}
           <div 
