@@ -6,13 +6,13 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* French flag background - Blue | White | Red */}
       <div className="absolute inset-0 flex">
-        <div className="w-1/6 bg-primary" />
+        <div className="w-8 md:w-16 lg:w-1/6 bg-primary" />
         <div className="flex-1 bg-white" />
-        <div className="w-1/6 bg-secondary" />
+        <div className="w-8 md:w-16 lg:w-1/6 bg-secondary" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
+      <div className="relative z-10 container mx-auto px-6 md:px-8 pt-32 pb-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo */}
           <div 
