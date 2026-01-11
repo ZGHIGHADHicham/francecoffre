@@ -9,18 +9,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                <span className="font-display font-bold text-xl text-secondary-foreground">FC</span>
-              </div>
-              <div>
-                <span className="font-display font-bold text-xl block leading-tight">
-                  France Coffre
-                </span>
-                <span className="text-xs text-primary-foreground/70 uppercase tracking-wider">
-                  Serrurerie
-                </span>
-              </div>
+            <div className="mb-6">
+              <img 
+                src="/images/france-coffre-logo.png" 
+                alt="France Coffre - Ouverture, Réparation, Installation" 
+                className="h-20 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-primary-foreground/80 max-w-md leading-relaxed mb-6">
               Spécialistes de l'ouverture, réparation et installation de coffres-forts. 
