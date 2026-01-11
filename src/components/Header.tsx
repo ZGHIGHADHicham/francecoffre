@@ -33,9 +33,9 @@ const Header = () => {
           {/* Logo */}
           <a href="/" className="flex items-center">
             <img 
-              src="/images/france-coffre-logo.png" 
+              src="/images/france-coffre-logo.svg" 
               alt="France Coffre - Ouverture, Réparation, Installation" 
-              className="h-14 w-auto"
+              className="h-20 w-auto"
             />
           </a>
 
