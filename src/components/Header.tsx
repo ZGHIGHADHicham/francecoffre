@@ -52,13 +52,23 @@ const Header = () => {
       <nav className="bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <a 
+            href="/" 
+            onClick={(e) => {
+              e.preventDefault();
+              if (location.pathname !== "/") {
+                navigate("/");
+              }
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="flex items-center cursor-pointer"
+          >
             <img 
               src="/images/france-coffre-logo.svg" 
               alt="France Coffre - Ouverture, Réparation, Installation" 
               className="h-20 w-auto"
             />
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
