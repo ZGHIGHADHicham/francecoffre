@@ -98,10 +98,10 @@ const Footer = () => {
             © {currentYear} France Coffre. Tous droits réservés.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors">
+            <a href="/mentions-legales" className="text-primary-foreground/60 hover:text-secondary transition-colors">
               Mentions légales
             </a>
-            <a href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors">
+            <a href="/confidentialite" className="text-primary-foreground/60 hover:text-secondary transition-colors">
               Confidentialité
             </a>
           </div>
