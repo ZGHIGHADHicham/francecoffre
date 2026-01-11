@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,11 +10,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="mb-6">
+            <div className="mb-6 bg-white rounded-lg p-3 inline-block">
               <img 
-                src="/images/france-coffre-logo.svg" 
+                src="/images/france-coffre-logo.png" 
                 alt="France Coffre - Ouverture, Réparation, Installation" 
-                className="h-24 w-auto"
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-primary-foreground/80 max-w-md leading-relaxed mb-6">
@@ -33,24 +34,24 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-lg mb-6">Services</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                <Link to="/#services" className="text-primary-foreground/70 hover:text-secondary transition-colors">
                   Ouverture de coffre-fort
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                <Link to="/#services" className="text-primary-foreground/70 hover:text-secondary transition-colors">
                   Réparation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                <Link to="/#services" className="text-primary-foreground/70 hover:text-secondary transition-colors">
                   Installation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#urgence" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                <Link to="/#urgence" className="text-primary-foreground/70 hover:text-secondary transition-colors">
                   Urgence 24/7
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -98,12 +99,12 @@ const Footer = () => {
             © {currentYear} France Coffre. Tous droits réservés.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="/mentions-legales" className="text-primary-foreground/60 hover:text-secondary transition-colors">
+            <Link to="/mentions-legales" className="text-primary-foreground/60 hover:text-secondary transition-colors">
               Mentions légales
-            </a>
-            <a href="/confidentialite" className="text-primary-foreground/60 hover:text-secondary transition-colors">
+            </Link>
+            <Link to="/confidentialite" className="text-primary-foreground/60 hover:text-secondary transition-colors">
               Confidentialité
-            </a>
+            </Link>
           </div>
         </div>
       </div>
