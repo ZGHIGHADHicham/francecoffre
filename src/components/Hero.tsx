@@ -37,17 +37,10 @@ const Hero = () => {
 
           {/* Main heading */}
           <p 
-            className="text-xl md:text-2xl lg:text-3xl text-foreground/80 font-light mb-4 opacity-0 animate-fade-up"
+            className="text-lg md:text-2xl lg:text-3xl text-foreground/80 font-light mb-12 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.3s" }}
           >
-            Spécialistes de l'ouverture
-          </p>
-          
-          <p 
-            className="text-2xl md:text-3xl lg:text-4xl text-secondary font-display font-semibold mb-12 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.4s" }}
-          >
-            de coffres-forts partout en France
+            Spécialistes de l'ouverture de coffres-forts <span className="text-secondary font-display font-semibold">partout en France</span>
           </p>
 
           {/* CTA Buttons */}
