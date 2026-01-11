@@ -1,8 +1,25 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
+    e.preventDefault();
+    
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.querySelector(anchor);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const element = document.querySelector(anchor);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -34,24 +51,40 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-lg mb-6">Services</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/#services" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                <a 
+                  href="#services" 
+                  onClick={(e) => handleAnchorClick(e, "#services")}
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors cursor-pointer"
+                >
                   Ouverture de coffre-fort
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/#services" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                <a 
+                  href="#services" 
+                  onClick={(e) => handleAnchorClick(e, "#services")}
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors cursor-pointer"
+                >
                   Réparation
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/#services" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                <a 
+                  href="#services" 
+                  onClick={(e) => handleAnchorClick(e, "#services")}
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors cursor-pointer"
+                >
                   Installation
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/#urgence" className="text-primary-foreground/70 hover:text-secondary transition-colors">
+                <a 
+                  href="#urgence" 
+                  onClick={(e) => handleAnchorClick(e, "#urgence")}
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors cursor-pointer"
+                >
                   Urgence 24/7
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

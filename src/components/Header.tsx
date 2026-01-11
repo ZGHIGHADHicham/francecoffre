@@ -1,10 +1,30 @@
 import { Phone, Mail, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    
+    if (location.pathname !== "/") {
+      // Navigate to home first, then scroll
+      navigate("/");
+      setTimeout(() => {
+        const element = document.querySelector(anchor);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      // Already on home, just scroll
+      const element = document.querySelector(anchor);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -42,20 +62,35 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/#services" className="text-foreground hover:text-primary font-medium transition-colors">
+            <a 
+              href="#services" 
+              onClick={(e) => handleAnchorClick(e, "#services")}
+              className="text-foreground hover:text-primary font-medium transition-colors cursor-pointer"
+            >
               Prestations
-            </Link>
-            <Link to="/#urgence" className="text-foreground hover:text-primary font-medium transition-colors">
+            </a>
+            <a 
+              href="#urgence" 
+              onClick={(e) => handleAnchorClick(e, "#urgence")}
+              className="text-foreground hover:text-primary font-medium transition-colors cursor-pointer"
+            >
               Urgences
-            </Link>
-            <Link to="/#about" className="text-foreground hover:text-primary font-medium transition-colors">
+            </a>
+            <a 
+              href="#about" 
+              onClick={(e) => handleAnchorClick(e, "#about")}
+              className="text-foreground hover:text-primary font-medium transition-colors cursor-pointer"
+            >
               À propos
-            </Link>
-            <Link to="/#contact">
+            </a>
+            <a 
+              href="#contact" 
+              onClick={(e) => handleAnchorClick(e, "#contact")}
+            >
               <Button variant="default" size="lg" className="shadow-gold">
                 Contactez-nous
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -72,20 +107,35 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-card border-t border-border animate-fade-up">
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-              <Link to="/#services" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMenuOpen(false)}>
+              <a 
+                href="#services" 
+                onClick={(e) => handleAnchorClick(e, "#services")}
+                className="text-foreground hover:text-primary font-medium py-2 cursor-pointer"
+              >
                 Prestations
-              </Link>
-              <Link to="/#urgence" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMenuOpen(false)}>
+              </a>
+              <a 
+                href="#urgence" 
+                onClick={(e) => handleAnchorClick(e, "#urgence")}
+                className="text-foreground hover:text-primary font-medium py-2 cursor-pointer"
+              >
                 Urgences
-              </Link>
-              <Link to="/#about" className="text-foreground hover:text-primary font-medium py-2" onClick={() => setIsMenuOpen(false)}>
+              </a>
+              <a 
+                href="#about" 
+                onClick={(e) => handleAnchorClick(e, "#about")}
+                className="text-foreground hover:text-primary font-medium py-2 cursor-pointer"
+              >
                 À propos
-              </Link>
-              <Link to="/#contact" onClick={() => setIsMenuOpen(false)}>
+              </a>
+              <a 
+                href="#contact" 
+                onClick={(e) => handleAnchorClick(e, "#contact")}
+              >
                 <Button variant="default" className="w-full">
                   Contactez-nous
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         )}
