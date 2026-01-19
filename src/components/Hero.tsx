@@ -32,50 +32,44 @@ const Hero = () => {
             />
           </div>
 
-          {/* Badge */}
+          {/* Content card with glass effect */}
           <div 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-8 opacity-0 animate-fade-up"
+            className="bg-white/80 backdrop-blur-sm rounded-2xl px-8 py-10 shadow-lg opacity-0 animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
-            <Clock className="w-4 h-4" />
-            <span className="text-sm font-medium">Disponible 24h/24 et 7j/7</span>
-          </div>
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+              <Clock className="w-4 h-4" />
+              <span className="text-sm font-medium">Disponible 24h/24 et 7j/7</span>
+            </div>
 
-          {/* Main heading */}
-          <p 
-            className="text-lg md:text-xl lg:text-2xl text-foreground font-medium mb-12 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.3s" }}
-          >
-            Spécialistes de l'ouverture de coffres-forts <span className="text-secondary">partout en France</span>
-          </p>
+            {/* Main heading */}
+            <p className="text-lg md:text-xl lg:text-2xl text-foreground font-medium mb-10">
+              Spécialistes de l'ouverture de coffres-forts <span className="text-secondary">partout en France</span>
+            </p>
 
-          {/* CTA Buttons */}
-          <div 
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-16 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.5s" }}
-          >
-            <a href="#contact">
-              <Button variant="default" size="lg" className="text-base px-8 py-6 min-w-[200px]">
-                Contactez-nous
-              </Button>
-            </a>
-            <a href="tel:+33179736262">
-              <Button variant="outline" size="lg" className="text-base px-8 py-6 min-w-[200px] border-primary text-primary hover:bg-primary hover:text-white">
-                <Phone className="w-5 h-5 mr-2" />
-                01 79 73 62 62
-              </Button>
-            </a>
-          </div>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+              <a href="#contact">
+                <Button variant="default" size="lg" className="text-base px-8 py-6 min-w-[200px]">
+                  Contactez-nous
+                </Button>
+              </a>
+              <a href="tel:+33179736262">
+                <Button variant="outline" size="lg" className="text-base px-8 py-6 min-w-[200px] border-primary text-primary hover:bg-primary hover:text-white bg-white">
+                  <Phone className="w-5 h-5 mr-2" />
+                  01 79 73 62 62
+                </Button>
+              </a>
+            </div>
 
-          {/* Features strip */}
-          <div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.6s" }}
-          >
-            <FeatureItem icon={<MapPin className="w-6 h-6" />} title="France" subtitle="entière" />
-            <FeatureItem icon={<Shield className="w-6 h-6" />} title="Expert" subtitle="à l'écoute" />
-            <FeatureItem icon={<Clock className="w-6 h-6" />} title="Urgence" subtitle="24h/24 - 7j/7" />
-            <FeatureItem icon={<CheckBadge />} title="Savoir-faire" subtitle="de qualité" />
+            {/* Features strip */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-border/50">
+              <FeatureItem icon={<MapPin className="w-6 h-6" />} title="France" subtitle="entière" />
+              <FeatureItem icon={<Shield className="w-6 h-6" />} title="Expert" subtitle="à l'écoute" />
+              <FeatureItem icon={<Clock className="w-6 h-6" />} title="Urgence" subtitle="24h/24 - 7j/7" />
+              <FeatureItem icon={<CheckBadge />} title="Savoir-faire" subtitle="de qualité" />
+            </div>
           </div>
         </div>
       </div>
