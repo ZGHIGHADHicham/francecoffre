@@ -4,21 +4,20 @@ import { Button } from "@/components/ui/button";
 const Urgence = () => {
   return (
     <section id="urgence" className="py-24 relative overflow-hidden">
-      {/* Background */}
+      {/* Background - Soft gradient */}
       <div 
-        className="absolute inset-0"
-        style={{ background: "var(--hero-gradient)" }}
+        className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary/90"
       />
       
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-destructive/10 rounded-full blur-3xl" />
+      {/* Subtle decorative elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Problem */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/20 text-destructive">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 text-white/90">
               <AlertCircle className="w-4 h-4" />
               <span className="text-sm font-medium">Urgence Coffre-fort ?</span>
             </div>

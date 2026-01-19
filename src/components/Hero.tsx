@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* French flag background - Blue | White | Red */}
-      <div className="absolute inset-0 flex">
-        <div className="w-8 md:w-16 lg:w-1/6 bg-primary" />
-        <div className="flex-1 bg-white" />
-        <div className="w-8 md:w-16 lg:w-1/6 bg-secondary" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted">
+      {/* Subtle decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-primary/5 to-transparent" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-secondary/5 to-transparent" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-gradient-to-t from-muted/50 to-transparent" />
       </div>
 
       {/* Content */}
@@ -76,8 +76,8 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-        <div className="w-6 h-10 rounded-full border-2 border-primary/30 flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-secondary rounded-full" />
+        <div className="w-6 h-10 rounded-full border-2 border-foreground/20 flex justify-center pt-2">
+          <div className="w-1.5 h-3 bg-primary/60 rounded-full" />
         </div>
       </div>
     </section>
