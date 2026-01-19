@@ -49,12 +49,12 @@ const Hero = () => {
             style={{ animationDelay: "0.5s" }}
           >
             <a href="#contact">
-              <Button variant="default" size="lg" className="text-lg px-8 py-6">
+              <Button variant="default" size="lg" className="text-base px-8 py-6 min-w-[200px]">
                 Contactez-nous
               </Button>
             </a>
             <a href="tel:+33179736262">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary hover:text-white">
+              <Button variant="outline" size="lg" className="text-base px-8 py-6 min-w-[200px] border-primary text-primary hover:bg-primary hover:text-white">
                 <Phone className="w-5 h-5 mr-2" />
                 01 79 73 62 62
               </Button>
