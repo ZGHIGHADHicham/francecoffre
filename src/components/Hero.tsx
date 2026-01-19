@@ -34,7 +34,7 @@ const Hero = () => {
 
           {/* Badge */}
           <div 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6 opacity-0 animate-fade-up"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-primary shadow-sm mb-6 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
             <Clock className="w-4 h-4" />
