@@ -1,14 +1,20 @@
 import { Phone, Shield, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted">
-      {/* Subtle decorative elements */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-primary/5 to-transparent" />
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-secondary/5 to-transparent" />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-gradient-to-t from-muted/50 to-transparent" />
+        <img 
+          src={heroBackground} 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        {/* Overlay gradient for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-primary/20" />
       </div>
 
       {/* Content */}
@@ -76,8 +82,8 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-        <div className="w-6 h-10 rounded-full border-2 border-foreground/20 flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-primary/60 rounded-full" />
+        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center pt-2">
+          <div className="w-1.5 h-3 bg-white/60 rounded-full" />
         </div>
       </div>
     </section>
