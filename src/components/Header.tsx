@@ -1,6 +1,6 @@
-import { Phone, Mail, Menu, X } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -13,44 +13,21 @@ const Header = () => {
     setIsMenuOpen(false);
     
     if (location.pathname !== "/") {
-      // Navigate to home first, then scroll
       navigate("/");
       setTimeout(() => {
         const element = document.querySelector(anchor);
         element?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } else {
-      // Already on home, just scroll
       const element = document.querySelector(anchor);
       element?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Top bar */}
-      <div className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center text-sm">
-          <a 
-            href="tel:+33179736262" 
-            className="flex items-center gap-2 hover:text-secondary transition-colors"
-          >
-            <Phone className="w-4 h-4" />
-            <span className="font-medium">01 79 73 62 62</span>
-          </a>
-          <a 
-            href="mailto:francecoffre@gmail.com?subject=Demande%20de%20devis"
-            className="flex items-center gap-2 hover:text-secondary transition-colors"
-          >
-            <Mail className="w-4 h-4" />
-            <span className="hidden sm:inline">Demander un devis</span>
-          </a>
-        </div>
-      </div>
-
-      {/* Main navigation */}
-      <nav className="bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-border">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-3">
           {/* Logo */}
           <a 
             href="/" 
@@ -66,38 +43,49 @@ const Header = () => {
             <img 
               src="/images/france-coffre-logo.svg" 
               alt="France Coffre - Ouverture, Réparation, Installation" 
-              className="h-20 w-auto"
+              className="h-14 w-auto"
             />
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* Desktop Navigation + Contact */}
+          <div className="hidden md:flex items-center gap-6">
             <a 
               href="#services" 
               onClick={(e) => handleAnchorClick(e, "#services")}
-              className="text-foreground hover:text-primary font-medium transition-colors cursor-pointer"
+              className="text-foreground/70 hover:text-primary font-medium transition-colors cursor-pointer text-sm"
             >
               Prestations
             </a>
             <a 
               href="#urgence" 
               onClick={(e) => handleAnchorClick(e, "#urgence")}
-              className="text-foreground hover:text-primary font-medium transition-colors cursor-pointer"
+              className="text-foreground/70 hover:text-primary font-medium transition-colors cursor-pointer text-sm"
             >
               Urgences
             </a>
             <a 
               href="#about" 
               onClick={(e) => handleAnchorClick(e, "#about")}
-              className="text-foreground hover:text-primary font-medium transition-colors cursor-pointer"
+              className="text-foreground/70 hover:text-primary font-medium transition-colors cursor-pointer text-sm"
             >
               À propos
             </a>
+            
+            <div className="h-5 w-px bg-border" />
+            
+            <a 
+              href="tel:+33179736262" 
+              className="flex items-center gap-2 text-primary font-semibold text-sm hover:text-primary/80 transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              <span>01 79 73 62 62</span>
+            </a>
+            
             <a 
               href="#contact" 
               onClick={(e) => handleAnchorClick(e, "#contact")}
             >
-              <Button variant="default" size="lg">
+              <Button variant="default" size="sm">
                 Contactez-nous
               </Button>
             </a>
@@ -115,28 +103,35 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-card border-t border-border animate-fade-up">
-            <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+          <div className="md:hidden border-t border-border py-4 animate-fade-up">
+            <div className="flex flex-col gap-3">
               <a 
                 href="#services" 
                 onClick={(e) => handleAnchorClick(e, "#services")}
-                className="text-foreground hover:text-primary font-medium py-2 cursor-pointer"
+                className="text-foreground/80 hover:text-primary font-medium py-2 cursor-pointer"
               >
                 Prestations
               </a>
               <a 
                 href="#urgence" 
                 onClick={(e) => handleAnchorClick(e, "#urgence")}
-                className="text-foreground hover:text-primary font-medium py-2 cursor-pointer"
+                className="text-foreground/80 hover:text-primary font-medium py-2 cursor-pointer"
               >
                 Urgences
               </a>
               <a 
                 href="#about" 
                 onClick={(e) => handleAnchorClick(e, "#about")}
-                className="text-foreground hover:text-primary font-medium py-2 cursor-pointer"
+                className="text-foreground/80 hover:text-primary font-medium py-2 cursor-pointer"
               >
                 À propos
+              </a>
+              <a 
+                href="tel:+33179736262" 
+                className="flex items-center gap-2 text-primary font-semibold py-2"
+              >
+                <Phone className="w-4 h-4" />
+                <span>01 79 73 62 62</span>
               </a>
               <a 
                 href="#contact" 
@@ -149,7 +144,7 @@ const Header = () => {
             </div>
           </div>
         )}
-      </nav>
+      </div>
     </header>
   );
 };
