@@ -13,8 +13,8 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
         {/* Overlay gradient for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-primary/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10" />
       </div>
 
       {/* Content */}
