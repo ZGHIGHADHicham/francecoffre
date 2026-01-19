@@ -42,12 +42,14 @@ const Hero = () => {
           </div>
 
           {/* Main heading */}
-          <p 
-            className="text-lg md:text-xl lg:text-2xl text-foreground font-medium mb-10 opacity-0 animate-fade-up"
+          <div 
+            className="inline-block bg-white rounded-xl px-6 py-4 shadow-sm mb-10 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.3s" }}
           >
-            Spécialistes de l'ouverture de coffres-forts <span className="text-secondary">partout en France</span>
-          </p>
+            <p className="text-lg md:text-xl lg:text-2xl text-foreground font-medium">
+              Spécialistes de l'ouverture de coffres-forts <span className="text-secondary">partout en France</span>
+            </p>
+          </div>
 
           {/* CTA Buttons */}
           <div 
