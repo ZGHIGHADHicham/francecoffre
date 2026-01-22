@@ -64,6 +64,16 @@ const Header = () => {
               Urgences
             </a>
             <a 
+              href="/galerie" 
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/galerie");
+              }}
+              className="text-foreground/70 hover:text-primary font-medium transition-colors cursor-pointer text-sm"
+            >
+              Galerie
+            </a>
+            <a 
               href="#about" 
               onClick={(e) => handleAnchorClick(e, "#about")}
               className="text-foreground/70 hover:text-primary font-medium transition-colors cursor-pointer text-sm"
@@ -118,6 +128,17 @@ const Header = () => {
                 className="text-foreground/80 hover:text-primary font-medium py-2 cursor-pointer"
               >
                 Urgences
+              </a>
+              <a 
+                href="/galerie" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  navigate("/galerie");
+                }}
+                className="text-foreground/80 hover:text-primary font-medium py-2 cursor-pointer"
+              >
+                Galerie
               </a>
               <a 
                 href="#about" 
