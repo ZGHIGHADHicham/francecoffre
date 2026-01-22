@@ -1,35 +1,42 @@
 import { KeyRound, Wrench, ShieldCheck, Lock, Settings, AlertTriangle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: <KeyRound className="w-8 h-8" />,
     title: "Ouverture de coffre-fort",
     description: "Intervention rapide et sans dommage pour l'ouverture de tous types de coffres-forts.",
+    link: "/services/ouverture-coffre",
   },
   {
     icon: <Wrench className="w-8 h-8" />,
     title: "Réparation",
     description: "Remise en état complète de votre coffre-fort après ouverture ou suite à une panne.",
+    link: "/services/reparation-coffre",
   },
   {
     icon: <Lock className="w-8 h-8" />,
     title: "Changement de serrure",
     description: "Remplacement et mise à niveau de votre système de verrouillage.",
+    link: "/services/changement-serrure",
   },
   {
     icon: <Settings className="w-8 h-8" />,
     title: "Installation",
     description: "Pose professionnelle de coffres-forts neufs avec ancrage sécurisé.",
+    link: "/services/installation-coffre",
   },
   {
     icon: <ShieldCheck className="w-8 h-8" />,
     title: "Maintenance",
     description: "Entretien préventif pour assurer le bon fonctionnement de votre équipement.",
+    link: "/services/maintenance-coffre",
   },
   {
     icon: <AlertTriangle className="w-8 h-8" />,
     title: "Urgence 24/7",
     description: "Disponible jour et nuit pour toutes vos situations d'urgence.",
+    link: "/services/urgence-coffre",
   },
 ];
 
@@ -65,16 +72,19 @@ const Services = () => {
 const ServiceCard = ({ 
   icon, 
   title, 
-  description, 
+  description,
+  link,
   index 
 }: { 
   icon: React.ReactNode; 
   title: string; 
   description: string;
+  link: string;
   index: number;
 }) => (
-  <div 
-    className="group relative bg-card rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-secondary/50 opacity-0 animate-fade-up"
+  <Link 
+    to={link}
+    className="group relative bg-card rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-secondary/50 opacity-0 animate-fade-up block cursor-pointer"
     style={{ animationDelay: `${0.1 * index}s` }}
   >
     {/* Icon */}
@@ -92,7 +102,7 @@ const ServiceCard = ({
 
     {/* Hover accent */}
     <div className="absolute bottom-0 left-0 right-0 h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 rounded-b-xl" />
-  </div>
+  </Link>
 );
 
 export default Services;
