@@ -34,6 +34,15 @@ const UrgenceCoffre = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl">
+              {/* Image */}
+              <div className="mb-10 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/images/galerie/coffre-21.jpeg" 
+                  alt="Outil Phoenix pour intervention d'urgence sur coffre-fort" 
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+              </div>
+
               <h2 className="font-display text-2xl font-bold text-foreground mb-6">
                 Service d'urgence disponible 24h/24
               </h2>
