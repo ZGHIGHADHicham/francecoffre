@@ -4,50 +4,44 @@ import Footer from "@/components/Footer";
 import Lightbox from "@/components/Lightbox";
 import { Camera } from "lucide-react";
 
-// Images placeholder - à remplacer par vos vraies photos
 const galleryImages = [
   {
-    src: "/placeholder.svg",
-    alt: "Ouverture de coffre-fort",
-    category: "Ouverture"
+    src: "/images/galerie/coffre-1.jpeg",
+    alt: "Coffres-forts NUGUE avec serrures électroniques"
   },
   {
-    src: "/placeholder.svg",
-    alt: "Réparation de mécanisme",
-    category: "Réparation"
+    src: "/images/galerie/coffre-2.jpeg",
+    alt: "Serrures Fichet-Bauche haute sécurité"
   },
   {
-    src: "/placeholder.svg",
-    alt: "Installation coffre-fort mural",
-    category: "Installation"
+    src: "/images/galerie/coffre-3.jpeg",
+    alt: "Intervention sur coffre Fichet-Bauche"
   },
   {
-    src: "/placeholder.svg",
-    alt: "Changement de serrure électronique",
-    category: "Changement serrure"
+    src: "/images/galerie/coffre-4.jpeg",
+    alt: "Mécanisme de serrure ancienne avec clé"
   },
   {
-    src: "/placeholder.svg",
-    alt: "Maintenance préventive",
-    category: "Maintenance"
+    src: "/images/galerie/coffre-5.jpeg",
+    alt: "Crochetage professionnel de serrure"
   },
   {
-    src: "/placeholder.svg",
-    alt: "Intervention d'urgence",
-    category: "Urgence"
+    src: "/images/galerie/coffre-6.jpeg",
+    alt: "Mécanisme interne de coffre-fort"
+  },
+  {
+    src: "/images/galerie/coffre-7.jpeg",
+    alt: "Système de verrouillage complexe"
+  },
+  {
+    src: "/images/galerie/coffre-8.jpeg",
+    alt: "Coffre-fort avec serrure électronique programmable"
   },
 ];
 
-const categories = ["Tous", "Ouverture", "Réparation", "Installation", "Changement serrure", "Maintenance", "Urgence"];
-
 const Galerie = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Tous");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const filteredImages = selectedCategory === "Tous" 
-    ? galleryImages 
-    : galleryImages.filter(img => img.category === selectedCategory);
 
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
@@ -59,11 +53,11 @@ const Galerie = () => {
   };
 
   const goToNext = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % filteredImages.length);
+    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
   };
 
   const goToPrev = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + filteredImages.length) % filteredImages.length);
+    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
   };
 
   return (
@@ -86,63 +80,32 @@ const Galerie = () => {
             </p>
           </div>
 
-          {/* Category filters */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  selectedCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-muted text-muted-foreground hover:bg-muted/80"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
           {/* Gallery grid */}
-          {filteredImages.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {filteredImages.map((image, index) => (
-                <div
-                  key={index}
-                  onClick={() => openLightbox(index)}
-                  className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group"
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-end">
-                    <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="font-medium text-sm">{image.alt}</p>
-                      <p className="text-xs text-white/70">{image.category}</p>
-                    </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                onClick={() => openLightbox(index)}
+                className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-end">
+                  <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="font-medium text-sm">{image.alt}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">Aucune image dans cette catégorie.</p>
-            </div>
-          )}
-
-          {/* Info message */}
-          <div className="mt-12 text-center p-6 bg-muted/50 rounded-lg">
-            <p className="text-muted-foreground">
-              📸 Des photos de vos interventions seront bientôt ajoutées ici.
-            </p>
+              </div>
+            ))}
           </div>
         </div>
       </main>
 
       <Lightbox
-        images={filteredImages}
+        images={galleryImages}
         currentIndex={currentImageIndex}
         isOpen={lightboxOpen}
         onClose={closeLightbox}
