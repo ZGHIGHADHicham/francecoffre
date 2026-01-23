@@ -34,6 +34,15 @@ const MaintenanceCoffre = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl">
+              {/* Image */}
+              <div className="mb-10 rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="/images/galerie/coffre-6.jpeg" 
+                  alt="Mécanisme interne de coffre-fort lors d'une maintenance" 
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+              </div>
+
               <h2 className="font-display text-2xl font-bold text-foreground mb-6">
                 Préservez la fiabilité de votre coffre-fort
               </h2>
