@@ -69,6 +69,34 @@ const galleryImages = [
     src: "/images/galerie/coffre-16.jpeg",
     alt: "Outil professionnel de serrurier"
   },
+  {
+    src: "/images/galerie/coffre-17.jpeg",
+    alt: "Intervention technique sur coffre Complice"
+  },
+  {
+    src: "/images/galerie/coffre-18.jpeg",
+    alt: "Technicien travaillant sur coffre-fort"
+  },
+  {
+    src: "/images/galerie/coffre-19.jpeg",
+    alt: "Coffre-fort bleu avec serrure à clé"
+  },
+  {
+    src: "/images/galerie/coffre-20.jpeg",
+    alt: "Manipulation d'outil de crochetage"
+  },
+  {
+    src: "/images/galerie/coffre-21.jpeg",
+    alt: "Outil Phoenix pour ouverture électronique"
+  },
+  {
+    src: "/images/galerie/coffre-22.jpeg",
+    alt: "Mécanisme de serrure démonté"
+  },
+  {
+    src: "/images/galerie/coffre-23.jpeg",
+    alt: "Pièce de serrure haute sécurité"
+  },
 ];
 
 const Galerie = () => {
