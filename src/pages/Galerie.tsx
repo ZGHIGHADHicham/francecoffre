@@ -37,6 +37,38 @@ const galleryImages = [
     src: "/images/galerie/coffre-8.jpeg",
     alt: "Coffre-fort avec serrure électronique programmable"
   },
+  {
+    src: "/images/galerie/coffre-9.jpeg",
+    alt: "Serrure KABA avec clavier électronique"
+  },
+  {
+    src: "/images/galerie/coffre-10.jpeg",
+    alt: "Porte de coffre-fort rouge blindée"
+  },
+  {
+    src: "/images/galerie/coffre-11.jpeg",
+    alt: "Coffre-fort blanc avec serrure à code"
+  },
+  {
+    src: "/images/galerie/coffre-12.jpeg",
+    alt: "Intervention sur coffre Fichet-Bauche scellé"
+  },
+  {
+    src: "/images/galerie/coffre-13.jpeg",
+    alt: "Technicien avec outil de crochetage"
+  },
+  {
+    src: "/images/galerie/coffre-14.jpeg",
+    alt: "Ouverture de coffre Fichet-Bauche"
+  },
+  {
+    src: "/images/galerie/coffre-15.jpeg",
+    alt: "Intervention technique sur serrure"
+  },
+  {
+    src: "/images/galerie/coffre-16.jpeg",
+    alt: "Outil professionnel de serrurier"
+  },
 ];
 
 const Galerie = () => {
