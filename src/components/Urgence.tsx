@@ -24,7 +24,7 @@ const Urgence = () => {
 
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
               Verrouillage inattendu ?<br />
-              <span className="text-secondary">Nous intervenons rapidement.</span>
+              <span className="text-white">Nous intervenons rapidement.</span>
             </h2>
 
             <div className="space-y-6">
