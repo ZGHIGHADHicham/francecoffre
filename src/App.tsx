@@ -14,6 +14,9 @@ import ChangementSerrure from "./pages/services/ChangementSerrure";
 import InstallationCoffre from "./pages/services/InstallationCoffre";
 import MaintenanceCoffre from "./pages/services/MaintenanceCoffre";
 import UrgenceCoffre from "./pages/services/UrgenceCoffre";
+import PerteCode from "./pages/services/PerteCode";
+import PerteCle from "./pages/services/PerteCle";
+import VenteCoffre from "./pages/services/VenteCoffre";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +35,9 @@ const App = () => (
           <Route path="/services/installation-coffre" element={<InstallationCoffre />} />
           <Route path="/services/maintenance-coffre" element={<MaintenanceCoffre />} />
           <Route path="/services/urgence-coffre" element={<UrgenceCoffre />} />
+          <Route path="/services/perte-code" element={<PerteCode />} />
+          <Route path="/services/perte-cle" element={<PerteCle />} />
+          <Route path="/services/vente-coffre" element={<VenteCoffre />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/confidentialite" element={<Confidentialite />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
