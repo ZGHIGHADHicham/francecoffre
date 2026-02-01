@@ -74,6 +74,16 @@ const Header = () => {
               Galerie
             </a>
             <a 
+              href="/marques" 
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/marques");
+              }}
+              className="text-foreground/70 hover:text-primary font-medium transition-colors cursor-pointer text-sm"
+            >
+              Nos Marques
+            </a>
+            <a 
               href="#about" 
               onClick={(e) => handleAnchorClick(e, "#about")}
               className="text-foreground/70 hover:text-primary font-medium transition-colors cursor-pointer text-sm"
@@ -139,6 +149,17 @@ const Header = () => {
                 className="text-foreground/80 hover:text-primary font-medium py-2 cursor-pointer"
               >
                 Galerie
+              </a>
+              <a 
+                href="/marques" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  navigate("/marques");
+                }}
+                className="text-foreground/80 hover:text-primary font-medium py-2 cursor-pointer"
+              >
+                Nos Marques
               </a>
               <a 
                 href="#about" 
