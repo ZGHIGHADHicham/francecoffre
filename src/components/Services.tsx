@@ -3,6 +3,18 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
+    icon: <Key className="w-8 h-8" />,
+    title: "Perte de clé",
+    description: "Clé perdue ou cassée ? Ouverture et remplacement de serrure sans dommage.",
+    link: "/services/perte-cle",
+  },
+  {
+    icon: <Hash className="w-8 h-8" />,
+    title: "Perte de code",
+    description: "Code oublié ? Nous réinitialisons votre système de verrouillage électronique.",
+    link: "/services/perte-code",
+  },
+  {
     icon: <KeyRound className="w-8 h-8" />,
     title: "Ouverture de coffre-fort",
     description: "Intervention rapide et sans dommage pour l'ouverture de tous types de coffres-forts.",
@@ -37,18 +49,6 @@ const services = [
     title: "Urgence 24/7",
     description: "Disponible jour et nuit pour toutes vos situations d'urgence.",
     link: "/services/urgence-coffre",
-  },
-  {
-    icon: <Hash className="w-8 h-8" />,
-    title: "Perte de code",
-    description: "Code oublié ? Nous réinitialisons votre système de verrouillage électronique.",
-    link: "/services/perte-code",
-  },
-  {
-    icon: <Key className="w-8 h-8" />,
-    title: "Perte de clé",
-    description: "Clé perdue ou cassée ? Ouverture et remplacement de serrure sans dommage.",
-    link: "/services/perte-cle",
   },
   {
     icon: <ShoppingBag className="w-8 h-8" />,
