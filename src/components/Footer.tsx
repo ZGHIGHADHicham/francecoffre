@@ -46,7 +46,7 @@ const Footer = () => {
               
               {/* Google Avis Button */}
               <a 
-                href="https://www.google.com/search?q=france+coffre&rlz=1C1ONGR_frFR1180FR1180&oq=france+coffre&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMhIIARAuGEMYrwEYxwEYgAQYigUyBggCECMYJzIGCAMQRRhAMgcIBBAAGIAEMgYIBRBFGDwyBggGEEUYPTIGCAcQRRg90gEIMTk4M2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
+                href="https://www.google.com/search?q=france+coffre+avis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-white text-foreground px-4 py-2 rounded-lg hover:bg-white/90 transition-colors"
