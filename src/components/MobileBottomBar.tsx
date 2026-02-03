@@ -37,10 +37,10 @@ const MobileBottomBar = () => {
         {/* Contact Button */}
         <button
           onClick={handleContactClick}
-          className="flex-1 flex flex-col items-center justify-center py-3 gap-1 bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors"
+          className="flex-1 flex flex-col items-center justify-center py-3 gap-1 bg-primary hover:bg-primary/90 transition-colors"
         >
-          <Mail className="w-6 h-6" />
-          <span className="text-xs font-medium">CONTACT</span>
+          <Mail className="w-6 h-6 text-white" />
+          <span className="text-xs font-medium text-secondary">CONTACT</span>
         </button>
       </div>
     </div>
