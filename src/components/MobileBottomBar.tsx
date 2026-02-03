@@ -40,7 +40,7 @@ const MobileBottomBar = () => {
           className="flex-1 flex flex-col items-center justify-center py-3 gap-1 bg-primary hover:bg-primary/90 transition-colors"
         >
           <Mail className="w-6 h-6 text-white" />
-          <span className="text-xs font-medium text-secondary">CONTACT</span>
+          <span className="text-xs font-medium text-[#ff3b3b]">CONTACT</span>
         </button>
       </div>
     </div>
