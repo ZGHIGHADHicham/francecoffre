@@ -2,6 +2,9 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const GOOGLE_AVIS_URL =
+    "https://www.google.com/search?q=France+Coffre+&sca_esv=6632657489d50d73&rlz=1C1ONGR_frFR1180FR1180&biw=2560&bih=1271&aic=0&sxsrf=ANbL-n6COFArHGthgpNVYUZHkOsnawsp5A%3A1769975519430&ei=365_abqAGpKrkdUPnuGGgQY&ved=0ahUKEwj66-LQiLmSAxWSVaQEHZ6wIWAQ4dUDCBE&uact=5&oq=France+Coffre+&gs_lp=Egxnd3Mtd2l6LXNlcnAiDkZyYW5jZSBDb2ZmcmUgMgQQIxgnMgUQABiABDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjBBlCyBFiyBHABeACQAQCYAUCgAW-qAQEyuAEDyAEA-AEBmAICoAJKwgIHEAAYHhiwA8ICCRAAGAgYHhiwA8ICCxAAGIAEGKIEGLADwgILEAAYiQUYogQYsAPCAggQABjvBRiwA5gDAIgGAZAGCJIHATKgB9MKsgcBMbgHR8IHBTAuMS4xyAcHgAgB&sclient=gws-wiz-serp";
+
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
   const location = useLocation();
@@ -46,9 +49,15 @@ const Footer = () => {
               
               {/* Google Avis Button */}
               <a 
-                href="https://www.google.com/search?q=France+Coffre+&sca_esv=6632657489d50d73&rlz=1C1ONGR_frFR1180FR1180&biw=2560&bih=1271&aic=0&sxsrf=ANbL-n6COFArHGthgpNVYUZHkOsnawsp5A%3A1769975519430&ei=365_abqAGpKrkdUPnuGGgQY&ved=0ahUKEwj66-LQiLmSAxWSVaQEHZ6wIWAQ4dUDCBE&uact=5&oq=France+Coffre+&gs_lp=Egxnd3Mtd2l6LXNlcnAiDkZyYW5jZSBDb2ZmcmUgMgQQIxgnMgUQABiABDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjBBlCyBFiyBHABeACQAQCYAUCgAW-qAQEyuAEDyAEA-AEBmAICoAJKwgIHEAAYHhiwA8ICCRAAGAgYHhiwA8ICCxAAGIAEGKIEGLADwgILEAAYiQUYogQYsAPCAggQABjvBRiwA5gDAIgGAZAGCJIHATKgB9MKsgcBMbgHR8IHBTAuMS4xyAcHgAgB&sclient=gws-wiz-serp"
+                href={GOOGLE_AVIS_URL}
+                onClick={(e) => {
+                  // Force l'ouverture dans un nouvel onglet (évite toute tentative d'ouverture dans l'iframe)
+                  e.preventDefault();
+                  window.open(GOOGLE_AVIS_URL, "_blank", "noopener,noreferrer");
+                }}
                 target="_blank"
                 rel="noopener noreferrer"
+                referrerPolicy="no-referrer"
                 className="flex items-center gap-2 bg-white text-foreground px-4 py-2 rounded-lg hover:bg-white/90 transition-colors"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
