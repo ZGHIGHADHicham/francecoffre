@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
 
 const GOOGLE_AVIS_URL =
-  "https://www.google.com/search?q=france+coffre&sca_esv=51db692ab24d98dd&authuser=1&source=hp&ei=M1KCaa_xFfytqtsP1ZaI2AQ&iflsig=AFdpzrgAAAAAaYJgQ8IAH_EdtoiPgTS-wRUBdqEtw9Cy&gs_ssp=eJzj4tVP1zc0LMs2KjIzTi8wYLRSNagwMU81MzcyMEw1MDFMNDS1tDKoSLVMNk60TDQ0NjcyNzEyMPfiTStKzEtOVUjOT0srSgUAg_ATQw&oq=france+&gs_lp=Egdnd3Mtd2l6IgdmcmFuY2UgKgIIADIQEC4YgAQYQxjHARiKBRivATILEAAYgAQYsQMYgwEyDRAAGIAEGLEDGIMBGAoyEBAAGIAEGLEDGEMYgwEYigUyEBAuGIAEGNEDGEMYxwEYigUyChAAGIAEGEMYigUyCBAAGIAEGLEDMgsQABiABBixAxiDATIKEAAYgAQYQxiKBTILEAAYgAQYsQMYgwFI8xpQkgVY6gtwAXgAkAEAmAGEAaAB4gOqAQM2LjG4AQHIAQD4AQGYAgigAvkDqAIKwgIKEAAYAxjqAhiPAcICChAuGAMY6gIYjwHCAhEQLhiABBixAxjRAxiDARjHAcICChAuGIAEGEMYigXCAg0QLhiABBixAxhDGIoFwgIIEC4YgAQYsQOYAwjxBQ_M1oRz1V1pkgcDNy4xoAfDRbIHAzYuMbgH8QPCBwUwLjYuMsgHEYAIAA&sclient=gws-wiz";
+  "https://share.google/ApJaTJlPmQq3j92it";
 
 const MobileBottomBar = () => {
   const handleGoogleAvisClick = (e: React.MouseEvent) => {
